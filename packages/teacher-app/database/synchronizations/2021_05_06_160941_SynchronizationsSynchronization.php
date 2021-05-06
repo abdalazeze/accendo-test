@@ -1,8 +1,8 @@
 <?php
-use Illuminate\Support\Facades\Schema;
-use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
-class SyncSynchronization
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+class SynchronizationsSynchronization
 {
     /**
      * When enabled prevents data loss on encountering exceptions
@@ -34,6 +34,5 @@ class SyncSynchronization
     public function down()
     {
         //
-        Schema::dropIfExists('synchronizations');
     }
 }

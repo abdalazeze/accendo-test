@@ -1,0 +1,240 @@
+{
+	"info": {
+		"_postman_id": "94538902-2c9d-4e47-b3b7-ba9678ea849a",
+		"name": "Teacher App",
+		"description": "Accendo Test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get Students Users",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiZWZmNjc1MjI1OWUxNWY3NmY3Mzc1ZmNhMThmNzEzNWFlZjA2MWYxNGU5OWExZDAyNGQ2NGYzZjZiNmEzMTRiNGE3YjNmZjQwYTY1ZGI0NDUiLCJpYXQiOjE2MjAwMDgwMzIsIm5iZiI6MTYyMDAwODAzMiwiZXhwIjoxNjUxNTQ0MDMyLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.XDsR_CHEKLKzp3ZcxBa25BnAdFVzlYMt5xkyuHITjzjX9QTmTC5Y7crNYM0sEwCsZx6Gf-8g8MWigt0qSfCYS8CJN_78IWQi-XeHNmzjQDR__bY2Y2PcYvmMxnzHe49kldmD39IhlEo_mb1QOGyiZy4cSfR_nWHYawQniFXuHnnYOFQ6M3yatPDKSYKy8fk3wmMYv6GCkvR5GrmcPfOe4fr9caFx8zYvtrdgOJIOoLTyOR1fdPx0Bku8X5SIAo_trxkLDQeG16Ru3SadaqOwIpLbfvWsFTWcSKECI4MopvIjZcg55DNtmeyc17XikAtGRRCczVt7vVucmX0o8DaTKdcJx_fiVCwpH2MAwICgvJZDwOvNGXhdx7teJ_NnYQ69EZNmh-lBQNT7Z9NJ7uSbEG_RedBe_Jmwi0hkCh9amDYAfKm73U05l_hw5RMXRZdsAqaTGZTLZEXO3_pWFJYuQvUEZXJiXZp6ynlVZ60vsiXtDVPq-dv04B06-PRirfiyQIt-jFFJPU8zVL_hK-Nzk1YpgjGJg7KpcEXo3XATR5NK02gnUMZBtBdQZ4kOntzU3niYnRck0Y7q339ORXQA7QDhCh9YAkiSXr8hGvUe5mGnjbnfKgS6hEwjtFVbvO6cRDXnRk04ke_0kPFyI9peXG9IzAXlPq87ppnR-Eh3oL0",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/studentusers",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"studentusers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "Test",
+							"type": "text"
+						},
+						{
+							"key": "username",
+							"value": "TestUsername",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "Test@Test.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "Test",
+							"type": "text"
+						},
+						{
+							"key": "c_password",
+							"value": "Test",
+							"type": "text"
+						},
+						{
+							"key": "role",
+							"value": "teacher",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/register",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login Teacher",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "teacher0@example.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "password",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/login",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Homework",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiZWZmNjc1MjI1OWUxNWY3NmY3Mzc1ZmNhMThmNzEzNWFlZjA2MWYxNGU5OWExZDAyNGQ2NGYzZjZiNmEzMTRiNGE3YjNmZjQwYTY1ZGI0NDUiLCJpYXQiOjE2MjAwMDgwMzIsIm5iZiI6MTYyMDAwODAzMiwiZXhwIjoxNjUxNTQ0MDMyLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.XDsR_CHEKLKzp3ZcxBa25BnAdFVzlYMt5xkyuHITjzjX9QTmTC5Y7crNYM0sEwCsZx6Gf-8g8MWigt0qSfCYS8CJN_78IWQi-XeHNmzjQDR__bY2Y2PcYvmMxnzHe49kldmD39IhlEo_mb1QOGyiZy4cSfR_nWHYawQniFXuHnnYOFQ6M3yatPDKSYKy8fk3wmMYv6GCkvR5GrmcPfOe4fr9caFx8zYvtrdgOJIOoLTyOR1fdPx0Bku8X5SIAo_trxkLDQeG16Ru3SadaqOwIpLbfvWsFTWcSKECI4MopvIjZcg55DNtmeyc17XikAtGRRCczVt7vVucmX0o8DaTKdcJx_fiVCwpH2MAwICgvJZDwOvNGXhdx7teJ_NnYQ69EZNmh-lBQNT7Z9NJ7uSbEG_RedBe_Jmwi0hkCh9amDYAfKm73U05l_hw5RMXRZdsAqaTGZTLZEXO3_pWFJYuQvUEZXJiXZp6ynlVZ60vsiXtDVPq-dv04B06-PRirfiyQIt-jFFJPU8zVL_hK-Nzk1YpgjGJg7KpcEXo3XATR5NK02gnUMZBtBdQZ4kOntzU3niYnRck0Y7q339ORXQA7QDhCh9YAkiSXr8hGvUe5mGnjbnfKgS6hEwjtFVbvO6cRDXnRk04ke_0kPFyI9peXG9IzAXlPq87ppnR-Eh3oL0",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "Test homework",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "test",
+							"type": "text"
+						},
+						{
+							"key": "student_id[]",
+							"value": "21",
+							"type": "text"
+						},
+						{
+							"key": "student_id[]",
+							"value": "22",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/homeworks",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"homeworks"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get HomeWorks Submited",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiZWZmNjc1MjI1OWUxNWY3NmY3Mzc1ZmNhMThmNzEzNWFlZjA2MWYxNGU5OWExZDAyNGQ2NGYzZjZiNmEzMTRiNGE3YjNmZjQwYTY1ZGI0NDUiLCJpYXQiOjE2MjAwMDgwMzIsIm5iZiI6MTYyMDAwODAzMiwiZXhwIjoxNjUxNTQ0MDMyLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.XDsR_CHEKLKzp3ZcxBa25BnAdFVzlYMt5xkyuHITjzjX9QTmTC5Y7crNYM0sEwCsZx6Gf-8g8MWigt0qSfCYS8CJN_78IWQi-XeHNmzjQDR__bY2Y2PcYvmMxnzHe49kldmD39IhlEo_mb1QOGyiZy4cSfR_nWHYawQniFXuHnnYOFQ6M3yatPDKSYKy8fk3wmMYv6GCkvR5GrmcPfOe4fr9caFx8zYvtrdgOJIOoLTyOR1fdPx0Bku8X5SIAo_trxkLDQeG16Ru3SadaqOwIpLbfvWsFTWcSKECI4MopvIjZcg55DNtmeyc17XikAtGRRCczVt7vVucmX0o8DaTKdcJx_fiVCwpH2MAwICgvJZDwOvNGXhdx7teJ_NnYQ69EZNmh-lBQNT7Z9NJ7uSbEG_RedBe_Jmwi0hkCh9amDYAfKm73U05l_hw5RMXRZdsAqaTGZTLZEXO3_pWFJYuQvUEZXJiXZp6ynlVZ60vsiXtDVPq-dv04B06-PRirfiyQIt-jFFJPU8zVL_hK-Nzk1YpgjGJg7KpcEXo3XATR5NK02gnUMZBtBdQZ4kOntzU3niYnRck0Y7q339ORXQA7QDhCh9YAkiSXr8hGvUe5mGnjbnfKgS6hEwjtFVbvO6cRDXnRk04ke_0kPFyI9peXG9IzAXlPq87ppnR-Eh3oL0",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/homeworkssubmited",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"homeworkssubmited"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
