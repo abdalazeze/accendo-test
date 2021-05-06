@@ -135,7 +135,7 @@ Request headers
 
 For Api End points You can check folders for postman collections And this is the links 
 
-## Endpoints Teacher App:
+## Endpoints Student App:
 
 ### Authentication:
 
