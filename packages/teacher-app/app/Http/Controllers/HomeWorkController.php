@@ -110,8 +110,7 @@ class HomeWorkController extends BaseController
             $newHomework['updated_at']=$date;
             $newHomeworks[]= $newHomework;
         }
-        /* $homework =new Homeworks();
-        $homeworks=$homework->createManyRecord($newHomeworks); */
+        
         $homework = Homeworks::insert($newHomeworks);
     
         return $this->sendResponse($homework, 'Homework created successfully.');
