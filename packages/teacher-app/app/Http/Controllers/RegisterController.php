@@ -72,7 +72,7 @@ class RegisterController extends BaseController
         } 
     }
     /**
-     * Login api
+     * Login student api
      *
      * @return \Illuminate\Http\Response
      */

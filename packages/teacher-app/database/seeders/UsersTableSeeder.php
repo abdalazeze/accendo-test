@@ -38,11 +38,6 @@ class UsersTableSeeder extends Seeder
             $student->save();
             $student->roles()->attach($role_student);
         }
-        /* DB::table('users')->insert([
-            'name' => Str::random(10),
-            'email' => Str::random(10).'@gmail.com',
-            'password' => Hash::make('password'),
-        ]); *///php artisan db:seed --class=UsersTableSeeder php artisan db:seed --class=RoleTableSeeder
         
     }
 }

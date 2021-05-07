@@ -18,7 +18,6 @@ use App\Http\Controllers\HomeWorkController;
 Route::post('register', [RegisterController::class, 'register']);
 Route::post('login', [RegisterController::class, 'login']);
 
-Route::get('homeworksUser', HomeWorkController::class.'@index'); 
-Route::post('homeworks', HomeWorkController::class.'@store'); 
+Route::get('homeworksUser', HomeWorkController::class.'@index');  
 Route::put('homeworks/{id}', HomeWorkController::class.'@submitHomeWork');
    

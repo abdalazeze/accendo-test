@@ -16,6 +16,7 @@ class HomeWorkController extends BaseController
 {
    
    /**
+    *  Get student homework
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
@@ -49,7 +50,7 @@ class HomeWorkController extends BaseController
         return $this->sendResponse(HomeworkResource::collection($students), 'Students retrieved successfully.');
     }
     /**
-     * Display a listing of the Students Users.
+     * Display a listing of the Submited HomeWorks.
      *
      * @return \Illuminate\Http\Response
      */
@@ -117,7 +118,7 @@ class HomeWorkController extends BaseController
         
     } 
     /**
-     * Submit the specified resource in storage.
+     * Submit homewrok by student
      *
      *@param  \Illuminate\Http\Request  $request
      * @param  int  $id

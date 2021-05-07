@@ -23,9 +23,5 @@ Route::group(['middleware' => 'auth:api'], function() {
     Route::post('homeworks', HomeWorkController::class.'@store'); 
     Route::put('homeworks/{id}', HomeWorkController::class.'@submitHomeWork');
     Route::get('homeworkssubmited', HomeWorkController::class.'@getHomeWorksSubmited');
-   /*  Route::get('homeworks/{homework}', 'HomeWorkController@show');
-    Route::post('homeworks', 'HomeWorkController@store');
-    Route::put('homeworks/{homework}', 'HomeWorkController@update');
-    Route::delete('homeworks/{homework}', 'HomeWorkController@delete'); */
 });
 

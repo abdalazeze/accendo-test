@@ -13,7 +13,8 @@ class HomeWorkController extends BaseController
      * @return \Illuminate\Http\Response
      */
     public function index(\Illuminate\Http\Request $request)
-    {        
+    {     
+        // Use this to send to teacher app api to get results   
         $client = new \GuzzleHttp\Client();
         $url = env('TEACHER_API')."homeworksUser";
         //Get api token
@@ -34,7 +35,8 @@ class HomeWorkController extends BaseController
      * @return \Illuminate\Http\Response
      */
     public function submitHomeWork(\Illuminate\Http\Request $request, $id)
-    {        
+    {     
+        // Use this to send to teacher app api to submitHomeWork 
         $client = new \GuzzleHttp\Client();
         $url = env('TEACHER_API')."homeworks/".$id;
         
@@ -52,7 +54,7 @@ class HomeWorkController extends BaseController
          } catch (\Exception $ex) {
            $response = $ex->getResponse();
            \Log::critical($ex);
-           //dd($response->getBody());
+          
            return $this->sendError((string)$response->getBody());
          }
     }

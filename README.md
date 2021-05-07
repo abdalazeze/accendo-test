@@ -40,6 +40,8 @@ Run the database seeder and you're done
 
     php artisan db:seed
 
+Or if you want you can import db file from db folder to your database
+
 You can now access the server at http://localhost:8000
 
 ## API Teacher Specification
