@@ -53,7 +53,7 @@ Request headers
 | **Required** 	| **Key**              	| **Value**            	|
 |----------	|------------------	|------------------	|
 | Yes      	| Content-Type     	| application/json 	|
-| Yes 	    | Authorization    	| Bearer {token} |
+| Yes 	    | Authorization    	| Bearer {your_token} |
 
 
 For Api End points You can check folders for postman collections And this is the links 
